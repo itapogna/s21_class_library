@@ -12,3 +12,7 @@ def plot_x_by_class_y(*, table, x_column, y_column):
 
   pd.crosstab(table[x_column], table[y_column]).plot(kind='bar', figsize=(15,8), grid=True, logy=True)
   return None
+
+def smallest_number(*, the_list, the_item):
+  new_list = [item for item in the_list if item < the_item] #removing the item from the list
+  return new_list
